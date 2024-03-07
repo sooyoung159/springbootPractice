@@ -20,10 +20,8 @@ public class PostService {
         this.postMapper = postMapper;
     }
 
-    public List<Post> postList(String title) {
-//        return postMapper.listPost();
-//        return postRepository.findAll();
-//        return postRepository.findByTitle(title);
-        return postRepository.findByTitleContains(title);
+    public List<Post> postList() {
+        return postRepository.findAll();
+
     }
 }

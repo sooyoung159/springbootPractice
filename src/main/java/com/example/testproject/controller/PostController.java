@@ -22,13 +22,9 @@ public class PostController {
 
 
     @GetMapping("/list")
-    public List<Post> postList(@RequestParam("title") String title){
-        return postService.postList(title);
+    public List<Post> postList(){
+        return postService.postList();
     }
 
-    @GetMapping("/{postId}")
-    public Post postDetail(@PathVariable String postId) {
-        return new Post(UUID.randomUUID(), "title1", "content1", "soo1", LocalDateTime.now());
-    }
 
 }
